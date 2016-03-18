@@ -1,0 +1,34 @@
+<html>
+<head>
+<meta charset="UTF-8" />
+</head>
+<body>
+
+	<h1>Nuevo personal</h1>
+
+	<form action="/insertarPersonal" method="post">
+		<p>
+			<b>Nombre:</b> <input type='text' name='nombre' />
+		</p>
+	    <p>
+			<b>Apellidos:</b> <input type='text' name='apellidos' />
+		</p>
+		<p>
+			<b>Telf. Fijo:</b> <input type='text' name='fijo' />
+		</p>
+			
+		<p>
+			<b>Telf. Movil:</b> <input type='text' name='movil' />
+		</p>
+		<select NAME=”tipo”>
+			<option value=”gestion”>Gestión</option>
+			<option value=”vigilancia”>Vigilancia</option>
+			<option value=”conservacion”>Conservación</option>
+			<option value=”investigacion”>Investigación</option>
+		</select>
+		
+		<input type='submit' value='Enviar' />
+		<a href="/" class="button">Cancelar</a>
+	</form>
+</body>
+</html>

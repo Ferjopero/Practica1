@@ -1,0 +1,17 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+
+	<h1>Personal</h1>
+	<p th:each="personal : ${personalList}">
+		<span th:text="'Nombre:' + ${personal.nombre}" /> <br/>
+		<span th:text="'Apellidos:' + ${personal.apellidos}" /> <br/>
+		<span th:text="'Email:' + ${personal.email}" /> <br/>
+		<span th:text="'Fijo:' + ${personal.fijo}" /> <br/>
+		<span th:text="'Movil:' + ${personal.movil}" /> <br/>
+		<span th:text="'Tipo:' + ${personal.tipo}" /> <br/>
+	</p>
+
+	<a href="/">Volver</a>
+	
+</body>
+</html>

@@ -1,0 +1,46 @@
+<html>
+<head>
+<meta charset="UTF-8" />
+</head>
+<body>
+
+	<h1>Personal a modificar</h1>
+	<select NAME=”id”>
+		<p th:each="personal : ${personalList}">
+			<script th:inline="javascript">
+			/*<![CDATA[*/
+			var personalMostrado = /*[[${personal.nombre}]]*/ + /*[[${personal.apellidos}]]*/ + " - " + /*[[${personal.tipo}]]*/;
+			document.getElementById("identificadorPersonalMostrado").innerHTML = personalMostrado
+			/*]]>*/
+			</script>
+			<option value=”$(personal.id)” id="identificadorPersonalMostrado"></option>
+	</select>
+	
+
+<!--  De alguna  manera reconocera el id y nos dara el personal que queremos-->
+<!-- llamar de alguna forma a PersonalRepository findById()-->
+	<form action="/insertarPersonal" method="post">
+		<p>
+			<b>Nombre:</b> <input type='text' name='$(personal.nombre)' /><!--Si da algun error, probar con comillad dobles-->
+		</p>
+	    <p>
+			<b>Apellidos:</b> <input type='text' name='apellidos' />
+		</p>
+		<p>
+			<b>Telf. Fijo:</b> <input type='text' name='fijo' />
+		</p>
+			
+		<p>
+			<b>Telf. Movil:</b> <input type='text' name='movil' />
+		</p>
+		<select NAME=”tipo”>
+			<option value=”gestion”>Gestión</option>
+			<option value=”vigilancia”>Vigilancia</option>
+			<option value=”conservacion”>Conservación</option>
+			<option value=”investigacion”>Investigación</option>
+		</select>
+		
+		<input type='submit' value='Enviar' />
+	</form>
+</body>
+</html>

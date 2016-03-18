@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: Tablon3Contr
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: rafuni
+Implementation-Vendor-Id: es.sd
+Build-Jdk: 1.8.0_74
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+

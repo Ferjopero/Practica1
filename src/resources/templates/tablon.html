@@ -1,0 +1,14 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<body>
+
+	<h1>Tablón de anuncios</h1>
+
+	<a href="/nuevoAnuncio">Nuevo anuncio</a>
+		<p th:each="anuncio : ${anuncios}">
+		<a th:href="@{/mostrarPorPersona(usuario=${anuncio.autor.usuario})}"
+			th:text="${anuncio.autor.usuario}"></a> 
+		<a th:href="@{/mostrarPorAsunto(asunto=${anuncio.asunto})}"
+		    th:text="${anuncio.asunto}"></a> 
+		</p>
+</body>
+</html>
